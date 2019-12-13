@@ -54,8 +54,10 @@
                 </div>
 
                 {{ current.content }}
-
-            </section>
+{% if current.myangle %}
+		    <h4>My Angle</h4>
+		    <p> {{ current.myangle }}/p>
+                {% endif %}            </section>
             <section>
                 {% for post in site.posts limit: 5 %}
                     {% if post.id == current.id %}
